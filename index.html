@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перше знайомство з HTML</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
+            background-size: 400% 400%;
+            animation: gradientAnimation 8s ease infinite;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .content-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 0.8em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.8em;
+            background-color: #ff6f91;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff9671;
+        }
+        hr {
+            border: none;
+            border-top: 3px solid #ff6f91;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Потягнув дід за ріпку</h1>
+        <h2>Взялась бабка за діда</h2>
+        <h3>Вхопилася онука за бабку</h3>
+        <h4>Вчепилася жучка за внучку</h4>
+        <h5>Потягнулася кішка за жучку</h5>
+        <h6>Вчепилася мишка за кішку</h6>
+        <p>Варіанти форматування абзацу:</p>
+        <p align="center">Деякі з них можуть бути вирівняні по центру</p>
+        <p align="left">За умовчанням абзаци вирівнюються ліворуч, але це можна прописати в тезі абзацу.</p>
+        <p align="right">Іноді потрібно вирівняти текст з правого краю.</p>
+        <p align="justify">Часто текст вирівнюють за шириною. При цьому вирівнюванні рядки розтягуються так, щоб торкатися лівого та правого краю.</p>
+        <hr>
+        <p>Застосувати підкреслення різними горизонтальними лініями.</p>
+        <hr color="red" size="5" width="50%">
+        <hr color="red" size="6" width="40%">
+        <hr color="red" size="7" width="30%">
+        <hr color="red" size="8" width="20%">
+        <hr color="red" size="10" width="10%">
+        <div class="form-container">
+            <h2>Задайте своє питання</h2>
+            <form action="#" method="post">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
+                <label for="question">Ваше питання:</label>
+                <textarea id="question" name="question" rows="4" placeholder="Введіть ваше питання"></textarea>
+                <input type="submit" value="Надіслати">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
