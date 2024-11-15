@@ -73,6 +73,31 @@
             border-top: 3px solid #ff6f91;
             margin: 10px 0;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .modal-content {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .close-button {
+            cursor: pointer;
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #ff6f91;
+        }
     </style>
 </head>
 <body>
@@ -97,7 +122,7 @@
         <hr color="red" size="10" width="10%">
         <div class="form-container">
             <h2>Задайте своє питання</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="showModal(); return false;">
                 <label for="name">Ваше ім'я:</label>
                 <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
                 <label for="question">Ваше питання:</label>
@@ -106,5 +131,21 @@
             </form>
         </div>
     </div>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <p>Тут повинен бути PHP код :(</p>
+            <div class="close-button" onclick="closeModal()">Закрити</div>
+        </div>
+    </div>
+
+    <script>
+        function showModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
